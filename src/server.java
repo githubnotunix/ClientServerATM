@@ -34,51 +34,32 @@ public class server {
 			switch(parsedInt)
 			{
 			case 1:
-				//System.out.print("Enter money to be withdrawn:");
-				/*while() {*/
-					//withdraw = scanner.nextInt();
-				
 					if(sc.hasNextLine()) {
 						
 						withdraw = sc.nextLine();
 						int withdrawInt = 0;
 						try {
 							withdrawInt = Integer.parseInt(withdraw);
-							//p.print(withdrawInt);
 						}
 						catch(Exception e) {
 							System.out.println("Error: " + e.toString());
-
 						}
-						/*finally
-						{
-							withdrawInt = 0;
-							System.out.println("withdraw canceled");
-						}*/
-						//p.print(withdrawInt);p
-						//p.println(balance);
+						p.println(balance);
 						if(balance >= withdrawInt)
 						{
-							
-							//withdraw = sc.nextLine();
 							balance = balance - withdrawInt;
-							//System.out.println("Please collect your money");
 							p.println(balance);
 							break;
 						}
 						else
 						{
-							//p.println(balance);
 							//System.out.println("Insufficient Balance");
 						}
 						System.out.println("");
 					}
 					else {
 						System.out.println("Enter a valid number");
-						//withdraw = scanner.nextInt();
 					}
-				//}
-
 				break;
 
 			case 2:

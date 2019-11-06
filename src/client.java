@@ -25,9 +25,8 @@ public class client {
 	{
 		if(number.equals("1"))
 		{
-			
-			System.out.println("Enter an amount to withdraw");
-			
+			while(true) {
+			System.out.println("Enter an amount to withdraw");	
 			while(true) {
 				withdraw = sc.nextLine();
 			try {
@@ -40,6 +39,11 @@ public class client {
 			}
 			p.println(withdraw);
 			balance = sc1.nextInt();
+			if(balance >= withdrawInt)
+			{
+				//balance = balance - withdrawInt;
+				//p.println(balance);
+							balance = sc1.nextInt();
 			System.out.println("Current Balance: " + balance);
 			System.out.println("");
 			System.out.println("Automated Teller Machine");
@@ -49,6 +53,23 @@ public class client {
 		    System.out.println("Choose 4 for EXIT");
 			number = sc.nextLine();
 			p.println(number);
+				break;
+			}
+			else
+			{
+				System.out.println("Insufficient Balance");
+				System.out.println("Automated Teller Machine");
+			    System.out.println("Choose 1 for Withdraw");
+			    System.out.println("Choose 2 for Deposit");
+			    System.out.println("Choose 3 for Check Balance");
+			    System.out.println("Choose 4 for EXIT");
+				number = sc.nextLine();
+				p.println(number);
+				break;
+			}
+			
+
+		}
 		}
 		else if(number.equals("2"))
 		{
