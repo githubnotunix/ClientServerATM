@@ -10,6 +10,7 @@ public class server {
 		int balance = 10000;
 
 		ServerSocket s1 = new ServerSocket(123);
+		while(true) {
 		Socket ss = s1.accept();
 		Scanner sc = new Scanner(ss.getInputStream());
 		Scanner scanner = new Scanner(System.in);
@@ -56,7 +57,11 @@ public class server {
 				break;
 
 			case 4:
+				ss.close();
+				break;
 			}
+			//break;
+		}
 		}
 	}
 }

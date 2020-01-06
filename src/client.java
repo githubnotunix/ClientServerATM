@@ -94,7 +94,9 @@ public class client {
 				number = sc.nextLine();
 			} else if (number.contentEquals("4")) {
 				try {
+					p.println(number);
 					System.out.println("Have a nice day!");
+					s.close();
 					System.exit(0);
 				} catch (Exception e) {
 					System.out.println("System failed");
